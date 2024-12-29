@@ -1,0 +1,14 @@
+{
+	"name": "backend",
+	"scripts": {
+		"dev": "bun run --hot --env-file=.env src/index.ts"
+	},
+	"dependencies": {
+		"hono": "^4.6.15",
+		"pg": "^8.13.1"
+	},
+	"devDependencies": {
+		"@types/pg": "^8.11.10",
+		"@types/bun": "latest"
+	}
+}
