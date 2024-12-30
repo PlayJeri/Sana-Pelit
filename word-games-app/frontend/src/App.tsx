@@ -1,25 +1,26 @@
-import { useState } from "react";
-import { Button } from "./components/ui/button";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { GameCards } from "./components/ui/gameCards";
+import { Header } from "./components/ui/header";
+import { CrossWordGame } from "./components/games/crossword/page";
+import { WordGuesserGame } from "./components/games/wordGuesser/page";
 
-function App() {
-	const [count, setCount] = useState(0);
-
+const App: React.FC = () => {
 	return (
-		<>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					<Button>{count}</Button>
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+		<div className="min-h-screen bg-neutral-900 text-neutral-200">
+			<Router>
+				<nav>
+					<Header />
+				</nav>
+				<main className="container px-4 py-8 mx-auto">
+					<Routes>
+						<Route path={"/"} element={<GameCards />} />
+						<Route path="/pelit/ristikko" element={<CrossWordGame />} />
+						<Route path="/pelit/arvaus" element={<WordGuesserGame />} />
+					</Routes>
+				</main>
+			</Router>
+		</div>
 	);
-}
+};
 
 export default App;
