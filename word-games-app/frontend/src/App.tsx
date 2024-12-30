@@ -3,6 +3,7 @@ import { GameCards } from "./components/ui/gameCards";
 import { Header } from "./components/ui/header";
 import { CrossWordGame } from "./components/games/crossword/page";
 import { WordGuesserGame } from "./components/games/wordGuesser/page";
+import WordlePage from "./components/games/wordle/page";
 
 const App: React.FC = () => {
 	return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 						<Route path={"/"} element={<GameCards />} />
 						<Route path="/pelit/ristikko" element={<CrossWordGame />} />
 						<Route path="/pelit/arvaus" element={<WordGuesserGame />} />
+						<Route path="/pelit/sanuli" element={<WordlePage />} />
 					</Routes>
 				</main>
 			</Router>

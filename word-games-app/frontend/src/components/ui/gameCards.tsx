@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const games = [
 	{
-		id: "sanaruudukko",
-		name: "Sanaruudukko",
+		id: "sanuli",
+		name: "Sanuli",
 		image: "/placeholder.svg?height=200&width=300",
 	},
 	{
